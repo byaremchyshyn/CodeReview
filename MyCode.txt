@@ -1,4 +1,4 @@
-private List<string> getPossibleMoves(string text)
+        private static List<string> GetPossibleMoves(string text)
         {
             string[,] table =
             {
@@ -41,4 +41,19 @@ private List<string> getPossibleMoves(string text)
             }
 
             return possibleMoves;
+        }
+
+        private static void PrintNumbers()
+        {
+            for (var i = 0; i < 100; i++)
+            {
+                var result = "";
+                if (i % 3 == 0)
+                    result = "Fizz";
+                if (i % 5 == 0)
+                    result += "Buzz";
+                if (result == "")
+                    result = i.ToString(CultureInfo.InvariantCulture);
+                Console.WriteLine(result);
+            }
         }
